@@ -1,0 +1,273 @@
+﻿main {
+    overflow: hidden;
+}
+
+.header_background{
+    position: relative;
+    display: flex;
+    width: 400vw;
+    height: 90vh;
+    min-height: 600px;
+    max-height: 800px;
+    animation: slide 30s infinite;
+}
+
+    .header_background img{
+        width: 100vw;
+    }
+
+@keyframes slide {
+    0%, 10%, 100% {
+        margin-left: 0%;
+    }
+
+    20%, 30% {
+        margin-left: -100vw;
+    }
+
+    40%, 50% {
+        margin-left: -200vw;
+    }
+
+    60%, 90% {
+        margin-left: -300vw;
+    }
+}
+
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 80px;
+    color: #ffee60;
+}
+
+.top-10-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 100px;
+}
+
+.movie-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 5px;
+}
+
+    .movie-row:nth-child(odd) {
+        background-color: #222;
+    }
+
+.movie-number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 10px;
+    color: yellow;
+}
+
+.movie-title {
+    flex: 1;
+}
+
+.movie-row a {
+    background-color: yellow;
+    color: #000;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+    .movie-row a:hover {
+        background-color: #ffc107;
+    }
+
+
+
+.slider-container {
+    position: relative;
+    /* width: 90%; */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.content-4 {
+    min-width: 20%;
+    margin: 0 10px;
+    flex: 0 0 20%;
+    text-align: center;
+}
+
+.nav {
+    position: absolute;
+    top: 40%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size: 48px;
+    width: 75px;
+    height: 75px;
+    color: #ffffff;
+    z-index: 1;
+}
+
+    .nav.prev {
+        left: 50px;
+    }
+
+    .nav.next {
+        right: 50px;
+    }
+
+    .nav:hover {
+        color: #ffee60;
+    }
+
+
+
+
+.content-2box,
+.content-4box {
+    display: flex;
+    /* flex-wrap: wrap; */
+    margin: 50px;
+    width: 80%;
+    font-family: 'Ubuntu';
+    line-height: 2;
+}
+
+
+.content-4 h2 {
+    color: #ffee60;
+}
+
+.content-4 img {
+    width: 100%;
+    height: 50vh;
+}
+
+.content-down {
+    height: 200px;
+}
+
+    .content-down ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+.content-booking {
+    background-color: yellow;
+    width: 150px;
+    margin: 15% auto;
+}
+
+    .content-booking a {
+        border: none;
+        transition: 0.4s;
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+
+.sessionHead {
+    text-align: center;
+    color: #ffee60;
+    font-size: 28px;
+}
+
+    .sessionHead::after {
+        content: "";
+        height: 1.5px;
+        width: 6%;
+        text-align: center;
+        position: absolute;
+        background-color: #ffee60;
+        ;
+        left: 0;
+        margin-left: 47%;
+        margin-top: 50px;
+    }
+
+#promoBox {
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+#promoSlide {
+    display: flex;
+    flex-wrap: wrap;
+    height: 700px;
+    width: 500%;
+    transition-duration: 0.5s;
+}
+
+.promoImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+    .promoImg img {
+        width: 600px;
+        height: 500px;
+        border-radius: 15px;
+        box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+        transition-duration: 0.3s;
+    }
+
+#promoTxt {
+    width: 500%;
+    height: 100px;
+    display: flex;
+    position: relative;
+    top: -20px;
+}
+
+    #promoTxt p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        color: #ffee60;
+        font-size: 32px;
+        text-shadow: 1px 1px 0px grey;
+    }
+
+.promoImg img:hover {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
+
+#promo i {
+    color: #ffee60;
+    font-size: 40px;
+    margin-top: 250px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.fa-chevron-left {
+    margin-left: 10%;
+}
+
+.fa-chevron-right {
+    right: 0;
+    margin-right: 10%;
+}

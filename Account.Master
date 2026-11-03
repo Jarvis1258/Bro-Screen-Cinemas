@@ -1,0 +1,137 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Account.master.cs" Inherits="Bro_Screen_Cinemas.Account1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bro Screen Cinemas</title>
+    <link rel="icon" href="image/titleIcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/base.css?v=<%= DateTime.Now.Ticks %>">
+    <link rel="stylesheet" href="css/account.css?v=<%= DateTime.Now.Ticks %>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap">
+    <style>
+        .info {
+            margin-bottom: 30px;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="navhead">
+                <div class="contact">
+                    <a href="tel:+60123456789"><i class="fa-solid fa-phone"></i></a>
+                    <a href="mailto:limcc-wp22@student.tarc.edu.my"><i class="fa-regular fa-envelope"></i></a>
+                </div>
+                <div class="logo">
+                    <a href="Homepage.aspx">
+                        <img src="image/titleIcon.png" alt="logo"></a>
+                </div>
+
+                <div class="login">
+                    <asp:HyperLink ID="btnLogin" runat="server" NavigateUrl="~/Login.aspx">Login</asp:HyperLink>
+                    <asp:HyperLink ID="btnUsername" runat="server" NavigateUrl="~/Account.aspx"><asp:Label ID="lblUsername" runat="server"></asp:Label></asp:HyperLink>
+                </div>
+            </div>
+
+            <ul>
+                <li><a href="Movie.aspx">Movies</a></li>
+                <li><a href="Cinema.aspx">Cinemas</a></li>
+                <li><a href="Experiences.aspx">Experience</a></li>
+                <li><a href="About.aspx">About Us</a></li>
+                <li><a href="Faq.aspx">FAQs</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form id="form1" runat="server">
+        <div>
+            <div class="header_room_container"></div>
+
+            <div class="content-2box">
+                <div class="content-left">
+                    <div class="infoContainer">
+                        <div class="info">
+                            <asp:Image ID="profilePic" runat="server" />
+                            <p>BSC Rewards Member</p>
+                            <h1><asp:Label ID="lblFullName" runat="server" Text="Label"></asp:Label></h1>
+                            <asp:HyperLink ID="editProfile" runat="server">Edit Profile</asp:HyperLink>
+
+                        </div>
+                    </div>
+                    <div class="accInfo">
+                        <div>
+                            <h2>My Account</h2>
+                            <ul>
+                                <li><a href="Account.aspx">My tickets</a></li>
+                                <li><a href="MyRewards.aspx">My Rewards</a></li>
+                                <li><a href="RewardCentre.aspx">Rewards Centre</a></li>
+                                <li><asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click">Log Out</asp:LinkButton></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="content-right">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+    </form>
+    <footer>
+        <div class="footer_left">
+            <a href="Homepage.aspx">
+                <img src="image/titleIcon.png" alt="logo" height="150"></a>
+            <p>
+                Bro Screen Cinemas<br>
+                123, Jalan xxx,<br>
+                50330 Kuala Lumpur, Malaysia
+            </p>
+        </div>
+
+        <div class="footer_right">
+            <div>
+
+                <div class="footer_link">
+                    <br>
+                    <ul>
+                        <li><a href="#">ABOUT US</a></li>
+                        <li><a href="#">CAREERS</a></li>
+                        <li><a href="faq.aspx">FAQ</a></li>
+                        <li><a href="#">PRIVACY POLICY</a></li>
+                    </ul>
+                </div>
+                <br>
+                Tel: <a href="tel:+60123456789">+60123456789</a>
+                <br>
+                Email: <a href="bsc@gmail.com">bsc@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="footerDown">
+            <div class="footer_social">
+                <ul>
+                    <li><a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://www.facebook.com"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.whatsapp.com"><i class="fa-brands fa-whatsapp"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="copyright">
+                Copyright &copy; 2024 Bro Screen Cinemas. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</body>
+<asp:ContentPlaceHolder ID="script" runat="server">
+</asp:ContentPlaceHolder>
+</html>

@@ -1,0 +1,154 @@
+﻿/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    height: 100vh;
+}
+
+#form1 {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    min-width: 250px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+    .sidebar h2 {
+        margin-bottom: 20px;
+        color: #ffee60;
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+        width: 80%;
+        padding-top: 20px;
+        border-top: 1px solid rgba(255, 255, 255, 0.5);
+    }
+
+        .sidebar ul li {
+            width: 100%;
+            margin: 15px auto;
+        }
+
+            .sidebar ul li a {
+                display: block;
+                padding: 15px;
+                color: #fff;
+                border-radius: 8px;
+                text-decoration: none;
+                text-align: center;
+            }
+
+                .sidebar ul li a:hover,
+                .sidebar ul li a.active {
+                    background-color: #ffef60;
+                    color: black;
+                }
+
+/* Main Content Styles */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    overflow-y: auto;
+}
+
+.header {
+    border-bottom: 1px solid #bdc3c7;
+    padding-bottom: 10px;
+}
+
+    .header .user-info {
+        display: flex;
+        align-items: center;
+    }
+
+        .header .user-info span {
+            margin-right: 15px;
+            font-size: 16px;
+            color: #555;
+        }
+
+h1 {
+    font-size: 24px;
+    color: #333;
+}
+
+.add-button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .add-button:hover {
+        background-color: #218838;
+    }
+
+.edit-btn,
+.delete-btn {
+    padding: 8px 12px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.edit-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+    .edit-btn:hover {
+        background-color: #0069d9;
+    }
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+    .delete-btn:hover {
+        background-color: #c82333;
+    }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+        .sidebar ul {
+            display: flex;
+            flex-direction: row;
+        }
+
+            .sidebar ul li a {
+                padding: 10px;
+                text-align: center;
+            }
+
+    .main-content {
+        padding: 10px;
+    }
+}

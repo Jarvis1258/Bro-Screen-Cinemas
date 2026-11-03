@@ -1,0 +1,75 @@
+nav {
+    position: relative;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ffee60;
+    margin-left: 20.5%;
+}
+
+#container{
+    padding: 0;
+    margin: 2.4375rem auto 0;
+    max-width: 65rem;
+}
+
+/* Grid container */
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Experience card */
+.experience-card {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    padding: 15px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.experience-card:hover .overlay {
+    opacity: 1;
+}
+
+/* Text styles */
+.overlay h3 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.overlay p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+}
